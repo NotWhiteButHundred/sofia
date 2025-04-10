@@ -131,8 +131,6 @@ for t in range(events['datetime'].max() + 1 - (wd + ls)):
     ))
 
     next_sub_tensor = future_tensor[0]
-    if args.minmax_scale:
-        next_sub_tensor /= norm_value
 
     model.dynamic_update(next_sub_tensor)
 
